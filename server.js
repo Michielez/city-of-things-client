@@ -16,24 +16,30 @@ const client = new InfluxDB({
 });
 const queryApi = client.getQueryApi(org);
 
+// ... (previous code remains the same)
+
 app.get('/api/query', (req, res) => {
-  const query = `from(bucket: "${bucket}") |> range(start: -1h)`;
-  const results = [];
+  const selectedInterval = req.query.interval || '1h';
+  const query = `from(bucket: "${bucket}") |> range(start: -${selectedInterval}) |> mean()`;
+
+  let averageValue = null;
 
   queryApi.queryRows(query, {
     next(row, tableMeta) {
       const o = tableMeta.toObject(row);
-      results.push(`${o._time} ${o._measurement}: ${o._field}=${o._value}`);
+      averageValue = o._value;
     },
     error(error) {
       console.error(error);
       res.status(500).json({ error: 'Error querying InfluxDB' });
     },
     complete() {
-      res.json(results);
+      res.json({ location: selectedInterval, average: averageValue });
     },
   });
 });
+
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
