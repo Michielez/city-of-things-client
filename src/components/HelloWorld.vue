@@ -42,5 +42,15 @@ axios
 </template>
 
 <style scoped>
-/* Your component styles here */
+div {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
 </style>
