@@ -48,6 +48,7 @@ div {
   margin-right: auto;
 
   text-align: center;
+
 }
 
 h1 {

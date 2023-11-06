@@ -21,9 +21,8 @@ h1 {
 
 nav {
     display: flex;
-    width: 100vw;
     height: 7vh;
-    background-color: lightgray;
+    background-color: #C7F9FB;
     padding: 0;
     justify-content: space-between;
     align-items: center;
