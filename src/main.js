@@ -6,12 +6,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from './components/HelloWorld.vue'
 import About from './components/About.vue'
+import ThePentha from './components/ThePentha.vue'
+import LagoZwembad from './components/LagoZwembad.vue'
+import FlandersMake from './components/FlandersMake.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About },
+    { path: '/the-pentha', component: ThePentha},
+    { path: '/lago-zwembad', component: LagoZwembad},
+    { path: '/flanders-make', component: FlandersMake}
   ],
 })
 

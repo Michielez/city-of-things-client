@@ -6,8 +6,7 @@
   <nav>
     <h1>City Of Things</h1>
     <div class="routes">
-        <router-link to="/about">about</router-link>
-        <router-link to="/devices">devices</router-link>
+        <router-link class="router-link" to="/about">about</router-link>
     </div>
   </nav>
 </template>
@@ -39,7 +38,9 @@ img {
     justify-content: space-around;
     margin-right: 2vw;
 }
-
+.router-link:hover {
+    text-decoration: underline;
+}
 a {
     color: black;
     font-variant: small-caps;
