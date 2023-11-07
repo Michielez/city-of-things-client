@@ -5,9 +5,6 @@
 <template>
   <nav>
     <h1>City Of Things</h1>
-    <div class="routes">
-        <router-link class="router-link" to="/about">about</router-link>
-    </div>
   </nav>
 </template>
 
@@ -21,7 +18,7 @@ h1 {
 nav {
     display: flex;
     height: 7vh;
-    background-color: #C7F9FB;
+    background-color: #fbcdc7;
     padding: 0;
     justify-content: space-between;
     align-items: center;

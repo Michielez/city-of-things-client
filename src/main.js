@@ -1,11 +1,11 @@
 import { createApp } from 'vue'
 import './style.css'
+import './reset.css'
 import App from './App.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from './components/HelloWorld.vue'
-import About from './components/About.vue'
 import ThePentha from './components/ThePentha.vue'
 import LagoZwembad from './components/LagoZwembad.vue'
 import FlandersMake from './components/FlandersMake.vue'
@@ -16,7 +16,6 @@ const router = createRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/grid', component: Grid },
-    { path: '/about', component: About },
     { path: '/the-pentha', component: ThePentha},
     { path: '/lago-zwembad', component: LagoZwembad},
     { path: '/flanders-make', component: FlandersMake}

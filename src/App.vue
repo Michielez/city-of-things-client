@@ -28,4 +28,5 @@ import Navbar from './components/Navbar.vue';
 .right-content{
   width: 100%;
 }
+
 </style>

@@ -3,9 +3,12 @@
 </script>
 
 <template>
-  <p>Lago Zwembad</p>
+  <div>
+    <p>Lago Zwembad</p>
+  </div>
 </template>
 
 <style scoped>
 /* Your component styles here */
+
 </style>
