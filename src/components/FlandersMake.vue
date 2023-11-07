@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p>test</p>
+  <p>Flanders make!</p>
 </template>
 
 <style scoped>

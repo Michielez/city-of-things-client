@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p>About</p>
+  <p>The grid</p>
 </template>
 
 <style scoped>

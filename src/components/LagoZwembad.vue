@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p>test</p>
+  <p>Lago Zwembad</p>
 </template>
 
 <style scoped>

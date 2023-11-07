@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p>test</p>
+  <p>The Pentha</p>
 </template>
 
 <style scoped>

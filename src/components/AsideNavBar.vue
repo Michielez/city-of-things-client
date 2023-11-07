@@ -13,22 +13,22 @@
             </li>
             <li>
                 <img src="../assets/icons/location.svg" alt="location">
-                <router-link class="router-link" to="/about">The grid</router-link>
+                <router-link class="router-link" to="/grid">The grid</router-link>
             </li>
         </ul>
         <p>Sites</p>
         <ul>
             <li>
                 <img src="../assets/icons/bolt.svg" alt="bolt">
-                <router-link class="router-link" to="/about">The pentha</router-link>
+                <router-link class="router-link" to="/the-pentha">The pentha</router-link>
             </li>
             <li>
                 <img src="../assets/icons/bolt.svg" alt="bolt">
-                <router-link class="router-link" to="/about">Lago Zwembad</router-link>
+                <router-link class="router-link" to="/lago-zwembad">Lago Zwembad</router-link>
             </li>
             <li>
                 <img src="../assets/icons/bolt.svg" alt="bolt">
-                <router-link class="router-link" to="/about">Flanders make</router-link>
+                <router-link class="router-link" to="/flanders-make">Flanders make</router-link>
             </li>
         </ul>
         </nav>  
