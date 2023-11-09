@@ -1,46 +1,50 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 
 </script>
 
 <template>
   <nav>
-    <h1>City Of Things</h1>
+    <h1>City of Things</h1>
+    <ul>
+        <li><RouterLink to="/">Dashboard</RouterLink></li>
+        <li><RouterLink to="/Grid">Grid</RouterLink></li>
+        <li><p>Gebouwen</p></li>
+    </ul>
   </nav>
 </template>
 
-<style scoped>
-h1 {
-    margin-left: 2vw;
-    font-size: 200%;
-    color: black;
-}
+<style scoped="scss" lang="scss">
 
 nav {
     display: flex;
-    height: 7vh;
-    background-color: #fbcdc7;
-    padding: 0;
-    justify-content: space-between;
+    height: 12vh;
+    width: 100vw;
+    background-color: #EDEDFD;
     align-items: center;
-}
 
-img {
-    width: 120px;
-    height: 70px;
-}
+    h1 {
+        font-size: 220%;
+        margin-left: 5%;
+        color: #1515BC;
+        font-weight: bold;
+    }
+    
+    ul {
+        display: flex;
+        margin-left: 3%;
 
-.routes {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-around;
-    margin-right: 2vw;
-}
-.router-link:hover {
-    text-decoration: underline;
-}
-a {
-    color: black;
-    font-variant: small-caps;
-    font-size: 120%;
+        li {
+            margin-right: 12%;
+            font-size: 155%;
+            font-weight: bold;
+
+            a {
+                text-decoration: none;
+                color: #05052E;
+            }
+        }
+    }
 }
 </style>

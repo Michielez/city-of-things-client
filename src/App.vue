@@ -1,5 +1,4 @@
 <script setup>
-import AsideNavBar from './components/AsideNavBar.vue';
 import HelloWorld from './components/HelloWorld.vue'
 import Navbar from './components/Navbar.vue';
 
@@ -7,26 +6,26 @@ import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <div class="flex-container">
-    <AsideNavBar class="aside-nav-bar"></AsideNavBar>
-    <div class="right-content">
-      <Navbar class="nav-bar"></Navbar>
-      <router-view></router-view>
-    </div>
+  <div class="nav-bar">
+    <Navbar></Navbar>
   </div>
+  <div class="main-content">
+    <router-view></router-view>
+  </div>
+  
 </template>
 
-<style scoped>
-.flex-container {
+<style scoped lang="scss">
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.main-content {
   display: flex;
-  min-height: 100vh;
-  max-width: 100vw;
-}
-.aside-nav-bar{
-  min-height: 100vh;
-}
-.right-content{
+  height: 88vh;
   width: 100%;
+
+  background-color: #EDEDFD;
 }
 
 </style>

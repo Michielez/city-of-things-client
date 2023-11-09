@@ -10,11 +10,12 @@ import ThePentha from './components/ThePentha.vue'
 import LagoZwembad from './components/LagoZwembad.vue'
 import FlandersMake from './components/FlandersMake.vue'
 import Grid from './components/Grid.vue'
+import Dashboard from './components/Dashboard.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', component: Home },
+    { path: '/', component: Dashboard },
     { path: '/grid', component: Grid },
     { path: '/the-pentha', component: ThePentha},
     { path: '/lago-zwembad', component: LagoZwembad},
