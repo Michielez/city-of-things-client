@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
     <div class="ons-doel-component">
       <div class="title-card">

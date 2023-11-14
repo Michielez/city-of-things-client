@@ -6,11 +6,11 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from './components/HelloWorld.vue'
-import ThePentha from './components/ThePentha.vue'
 import LagoZwembad from './components/LagoZwembad.vue'
 import FlandersMake from './components/FlandersMake.vue'
 import Grid from './components/Grid.vue'
 import Dashboard from './components/Dashboard.vue'
+import DePenta from './components/DePenta.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -20,7 +20,7 @@ const router = createRouter({
     { path: '/lago-zwembad', component: LagoZwembad},
     { path: '/flanders-make', component: FlandersMake},
     { path: '/magdalena-zwembad', component: Home },
-    { path: '/de-penta', component: Home },
+    { path: '/de-penta', component: DePenta },
     { path: '/kwe-a', component: Home },
     { path: '/pti', component: Home },
     { path: '/kubes', component: Home },
