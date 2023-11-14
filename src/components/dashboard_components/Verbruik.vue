@@ -109,7 +109,6 @@
                 flex-direction: column;
                 justify-content: center;
                 margin-left: 5%;
-                margin-top: 2%;
                 width: 90%;
 
                 .moment {
@@ -132,7 +131,7 @@
                 }
 
                 .week {
-                    margin-top: 12%;
+                    margin-top: 5%;
                     color: #9898FE;
                     font-size: 120%;
                 }
@@ -163,7 +162,6 @@
             img {
                 display: flex;
                 width: 60%;
-                margin-top: 3%;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -172,7 +170,6 @@
                 display: flex;
                 justify-content: space-around;
 
-                margin-top: 3%;
 
                 p {
                     color: #05052E;

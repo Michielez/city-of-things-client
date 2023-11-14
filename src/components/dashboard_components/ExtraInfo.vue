@@ -65,14 +65,14 @@
                 justify-content: center;
                 align-items: center;
 
-                margin-top: 3%;
+                margin-top: 1%;
 
                 .verbruiker {
                     font-size: 150%;
                     background-color: #A8A8F5;
 
                     width: 85%;
-                    height: 7vh;
+                    height: 6vh;
                     border-radius: 15px;
 
                     display: flex;
@@ -90,7 +90,7 @@
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
 
             h1 {
-                margin-top: 5%;
+                margin-top: 7%;
                 margin-left: 5%;
                 font-size: 280%;
                 font-weight: bold;
@@ -101,7 +101,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 8%;
+                margin-top: 5%;
                 
                 img {
                     width: 15%;
