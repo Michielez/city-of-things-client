@@ -12,7 +12,6 @@ export default {
   },
   methods: {
     toggleShowBuildings() {
-      console.log("toggling", this.showBuildings)
       this.showBuildings = !this.showBuildings
     }
   }
@@ -74,7 +73,6 @@ nav ul a:not(.dropdown a), nav p {
 }
 
 .dropdown-content {
-  margin-top: 10px;
   position: absolute;
   display: block;
   background-color: #EDEDFD;

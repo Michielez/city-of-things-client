@@ -15,10 +15,6 @@ export default {
   
 </template>
 
-<style scoped lang="scss">
-
-body {
-  font-family: 'Poppins', sans-serif;
-}
+<style scoped>
 
 </style>
