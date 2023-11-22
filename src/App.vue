@@ -1,19 +1,17 @@
 <script>
-import Navbar from './components/Navbar.vue';
+import { RouterView } from 'vue-router';
+
+import Header from './components/Header.vue';
 export default {
   components: {
-    Navbar
+    Header
   }
 }
 </script>
 
 <template>
-  <div class="nav-bar">
-    <Navbar></Navbar>
-  </div>
-  <div class="main-content">
-    <router-view></router-view>
-  </div>
+  <Header></Header>
+  <RouterView />
   
 </template>
 
@@ -21,13 +19,6 @@ export default {
 
 body {
   font-family: 'Poppins', sans-serif;
-}
-.main-content {
-  display: flex;
-  height: 88vh;
-  width: 100%;
-
-  background-color: #EDEDFD;
 }
 
 </style>
