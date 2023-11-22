@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import DashboardView from '../views/DashboardView.vue';
-// import Grid from '../views/Grid.vue';
+import GridView from '../views/GridView.vue';
 import BuildingView from '../views/BuildingView.vue';
 
 const router = createRouter({
@@ -12,11 +12,11 @@ const router = createRouter({
             name: 'dashboard',
             component: DashboardView
         },
-        // {
-        //     path: '/grid',
-        //     name: 'grid',
-        //     component: GridView
-        // }
+        {
+            path: '/grid',
+            name: 'grid',
+            component: GridView
+        },
         {
             path: '/buildings/:name',
             name: 'buildings',
