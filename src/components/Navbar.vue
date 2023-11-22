@@ -1,12 +1,19 @@
-<script setup>
+<script>
 import { RouterLink } from 'vue-router';
-import { ref } from 'vue';
 
-const showBuildings = ref(false);
-
-const toggleBuildings = () => {
-  showBuildings.value = !showBuildings.value;
-};
+export default {
+  name: "Navbar",
+  data() {
+    return {
+      showBuildings: false
+    }
+  },
+  methods: {
+    toggleShowBuildings() {
+      this.showBuildings = !this.showBuildings
+    }
+  }
+}
 </script>
 
 <template>
@@ -15,7 +22,7 @@ const toggleBuildings = () => {
     <ul>
       <li><RouterLink to="/">Dashboard</RouterLink></li>
       <li><RouterLink to="/Grid">Grid</RouterLink></li>
-      <li @click="toggleBuildings" class="clickable">Gebouwen</li>
+      <li @click="toggleShowBuildings" class="clickable">Gebouwen</li>
     </ul>
     <ul v-if="showBuildings" class="gebouwen">
       <li><RouterLink to="/Magdalena-Zwembad">Magdalena Zwembad</RouterLink></li>

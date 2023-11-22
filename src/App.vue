@@ -1,8 +1,10 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
 import Navbar from './components/Navbar.vue';
-
-
+export default {
+  components: {
+    Navbar
+  }
+}
 </script>
 
 <template>
