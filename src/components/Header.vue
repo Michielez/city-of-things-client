@@ -12,7 +12,6 @@ export default {
   },
   methods: {
     toggleShowBuildings() {
-      console.log("toggle");
       this.showBuildings = !this.showBuildings
     }
   }
@@ -26,9 +25,9 @@ export default {
       <ul>
         <li><RouterLink to="/">Dashboard</RouterLink></li>
         <li><RouterLink to="/Grid">Grid</RouterLink></li>
-        <div class="dropdown">
-          <p @click="toggleShowBuildings">Gebouwen</p>
-          <ul v-show="showBuildings" class="dropdown-content">
+        <div @mouseenter="toggleShowBuildings" class="dropdown">
+          <p @click="toggleShowBuildings">Gebouwen <span :class="showBuildings ? 'up' : 'down'"> &gt; </span></p>
+          <ul @mouseenter="toggleShowBuildings" @mouseleave="toggleShowBuildings" v-show="showBuildings" class="dropdown-content">
             <li @click="toggleShowBuildings" v-for="building in buildings">
               <RouterLink :to=" '/buildings/' + building.url ">{{ building.name }}</RouterLink>
             </li>
@@ -83,6 +82,21 @@ h1 {
   text-decoration: none;
   display: block;
 }
+
+span {
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+span.down {
+  transform: rotate(90deg);
+}
+
+span.up {
+  transform: rotate(-90deg);
+}
+
 
 .router-link-active {
   text-decoration: underline #1515BC 2px;
