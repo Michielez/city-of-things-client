@@ -11,32 +11,33 @@ export default {
     }
   },
   methods: {
-    toggleShowBuildings() {
-      this.showBuildings = !this.showBuildings
-    }
+    handleMouseover() {
+      this.showBuildings = true;
+    },
+    handleMouseleave() {
+      this.showBuildings = false;
+    },
   }
 }
 </script>
 
 <template>
   <header>
-    <h1>City of Things</h1>
+    <RouterLink to="/"><h1>City of Things</h1></RouterLink>
     <nav>
       <ul>
-        <li><RouterLink to="/">Dashboard</RouterLink></li>
-        <li><RouterLink to="/Grid">Grid</RouterLink></li>
-        <div @mouseout="toggleShowBuildings" class="dropdown">
-          <p @mouseenter="showBuildings ? null : toggleShowBuildings()">Gebouwen<span :class="showBuildings ? 'up' : 'down'"> &gt; </span>
+        <li><RouterLink class="underline" to="/">Dashboard</RouterLink></li>
+        <li><RouterLink class="underline" to="/grid">Grid</RouterLink></li>
+        <div @mouseover="handleMouseover" @mouseleave="handleMouseleave" class="dropdown">
+          <p>Gebouwen<span :class="showBuildings ? 'up' : 'down'"> &gt; </span>
           </p>
           <ul v-show="showBuildings" class="dropdown-content">
-            <li @click="toggleShowBuildings" v-for="building in buildings">
+            <li v-for="building in buildings">
               <RouterLink :to=" '/buildings/' + building.url ">{{ building.name }}</RouterLink>
             </li>
           </ul>
         </div>
       </ul>
-    </nav>
-    <nav>
     </nav>
   </header>
 </template>
@@ -78,7 +79,7 @@ nav ul a:not(.dropdown a), nav p {
   background-color: #EDEDFD;
   border-radius: 1rem;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
   z-index: 1;
   a {
     color: #05052E;
@@ -101,8 +102,8 @@ span {
   }
 }
 
-.router-link-active {
-  text-decoration: underline #1515BC 2px;
+.router-link-active.underline {
+  border-bottom: #1515BC 2px solid;
 }
 
 </style>
