@@ -11,7 +11,9 @@ import data from '../data/buildings';
 export default {
     name: "BuildingView",
     data() {
-        building: {}
+        return {
+            building: {}
+        }
     },
     watch: {
         '$route.params.name'(newUrl) {
