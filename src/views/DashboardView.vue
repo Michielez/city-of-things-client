@@ -30,11 +30,4 @@ main {
     justify-content: space-between;
     width: 90%;
 }
-    /* main {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100vw;
-        height: 88vh;
-    } */
 </style>
