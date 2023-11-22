@@ -1,10 +1,12 @@
 <script>
 import { RouterLink } from 'vue-router';
+import data from '../data/buildings';
 
 export default {
   name: "Navbar",
   data() {
     return {
+      buildings: data,
       showBuildings: false
     }
   },
@@ -25,15 +27,9 @@ export default {
       <li @click="toggleShowBuildings" class="clickable">Gebouwen</li>
     </ul>
     <ul v-if="showBuildings" class="gebouwen">
-      <li><RouterLink to="/Magdalena-Zwembad">Magdalena Zwembad</RouterLink></li>
-      <li><RouterLink to="/De-Penta">De Penta</RouterLink></li>
-      <li><RouterLink to="/KWE.A">KWE.A</RouterLink></li>
-      <li><RouterLink to="/PTI">PTI</RouterLink></li>
-      <li><RouterLink to="/KUBES">KUBES</RouterLink></li>
-      <li><RouterLink to="/VEG-I-TEC">VEG-I-TEC</RouterLink></li>
-      <li><RouterLink to="/Lago-Zwembad">Lago Zwembad</RouterLink></li>
-      <li><RouterLink to="/Hangar-K">Hangar K</RouterLink></li>
-      <li><RouterLink to="/Flanders-Make">Flanders Make</RouterLink></li>
+      <li v-for="building in buildings">
+        <RouterLink :to=" '/buildings/' + building.url ">{{ building.name }}</RouterLink>
+      </li>
     </ul>
   </nav>
 </template>
