@@ -59,6 +59,9 @@ hr {
     align-items: center;
     font-weight: 600;
 }
+#today p:last-child {
+    font-weight: 700;
+}
 #week, #month {
     color: #9898FE;
 }
