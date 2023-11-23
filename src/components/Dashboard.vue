@@ -37,7 +37,7 @@ export default {
 <style lang="scss" scoped>
 #dashboard {
     display: flex;
-    gap: 20px;
+    gap: 70px;
     height: 80vh;
 }
 #left, #middle, #right {
