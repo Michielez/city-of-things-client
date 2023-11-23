@@ -40,12 +40,17 @@ hr {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 #energyPrice h3 {
     font-weight: 600;
     color: #1515BC;
 }
-#today p:last-of-type {
+#today {
+    margin-bottom: 1rem;
+}
+#today p {
     font-size: 2rem;
 }
 #today, #week, #month {

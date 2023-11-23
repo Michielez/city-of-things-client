@@ -14,13 +14,16 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-color: #E6E6F5;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     padding: 2rem;
-
     flex: 1;
-
+}
+#projectDescription p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
 }
 #projectDescription span {
     color: #1515BC;
