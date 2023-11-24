@@ -10,7 +10,7 @@
             <Sustainability />
         </div>
         <div id="right">
-            <Consumers />
+            <Generators />
             <Facts />
         </div>
     </div>
@@ -19,7 +19,7 @@
 import TitleCard from './TitleCard.vue';
 import ProjectDescription from './ProjectDescription.vue';
 import EnergyPrice from './EnergyPrice.vue';
-import Consumers from './Consumers.vue';
+import Generators from './Generators.vue';
 import Facts from './Facts.vue';
 import Sustainability from './Sustainability.vue';
 export default {
@@ -28,7 +28,7 @@ export default {
         TitleCard,
         ProjectDescription,
         EnergyPrice,
-        Consumers,
+        Generators,
         Facts,
         Sustainability
     }

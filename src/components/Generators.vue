@@ -11,7 +11,7 @@
 </template>
 <script>
 export default {
-    name: "Consumers"
+    name: "Generators"
 }
 </script>
 <style lang="scss" scoped>
@@ -45,7 +45,7 @@ export default {
 #buildings li {
     background-color: #A8A8F5;
     border-radius: 1rem;
-    padding: 1.8rem 0rem;
+    padding: 1.2rem 0rem;
     font-weight: 600;
     font-size: 1.4rem;
 }
