@@ -14,6 +14,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #facts {
+    height: 15%;
     background-color: #A8A8F5;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;

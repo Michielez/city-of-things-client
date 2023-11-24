@@ -15,6 +15,7 @@ export default {
 </script>
 <style lang="scss">
 #titleCard {
+    height: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;

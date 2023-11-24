@@ -1,26 +1,57 @@
 <template>
     <div id="energyPrice">
-        <h3>Prijs energie</h3>
+        <div id="header">
+            <h3>Prijs energie</h3>
+            <p>
+                <span 
+                @click="handleChangeUnit('eur')" 
+                class="unit"
+                :class="{ 'active' : unit === 'eur'}">
+                eur</span> 
+                |
+                <span 
+                @click="handleChangeUnit('kwh')" 
+                class="unit"
+                :class="{ 'active' : unit === 'kwh'}">
+                kWh</span>
+            </p>
+        </div>
         <hr>
         <div id="prices">
             <div id="today">
                 <p>vandaag</p>
-                <p>€ 169,31</p>
+                <p v-if="unit === 'eur' ">€ {{ todayValue }}</p>
+                <p v-else>{{ todayValue }} kWh</p>
             </div>
             <div id="week">
                 <p>deze week</p>
-                <p>€ 2042,12</p>
+                <p v-if="unit === 'eur' ">€ {{ weekValue }}</p>
+                <p v-else>{{ weekValue }} kWh</p>
             </div>
             <div id="month">
                 <p>deze maand</p>
-                <p>€ 2251,43</p>
+                <p v-if="unit === 'eur' ">€ {{ monthValue }}</p>
+                <p v-else>{{ monthValue }} kWh</p>
             </div>
         </div>
     </div>
 </template>
 <script>
 export default {
-    
+    name: "EnergyPrice",
+    data() {
+        return {
+            unit: "eur",
+            todayValue: "196,31",
+            weekValue: "2032,23",
+            monthValue: "2593,12"
+        }
+    },
+    methods: {
+        handleChangeUnit(newUnit) {
+            this.unit = newUnit;
+        }
+    },
 }
 </script>
 <style lang="scss">
@@ -32,6 +63,19 @@ export default {
     border-radius: 1rem;
     padding: 2rem;
     flex: 1;
+}
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.unit {
+    cursor: pointer;
+}
+.active {
+    font-weight: 600;
+    color: #1515BC;
+    text-decoration: underline;
 }
 hr {
     width: 100%;
