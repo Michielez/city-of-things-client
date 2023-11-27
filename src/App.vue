@@ -16,5 +16,9 @@ export default {
 </template>
 
 <style scoped>
-
+main {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>

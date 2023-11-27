@@ -26,7 +26,7 @@ export default {
     <RouterLink to="/"><h1>City of Things</h1></RouterLink>
     <nav>
       <ul>
-        <li><RouterLink class="underline" to="/">Dashboard</RouterLink></li>
+        <li><RouterLink class="underline" to="/">Home</RouterLink></li>
         <li><RouterLink class="underline" to="/grid">Grid</RouterLink></li>
         <div @mouseover="handleMouseover" @mouseleave="handleMouseleave" class="dropdown">
           <p>Gebouwen<span :class="showBuildings ? 'up' : 'down'"> &gt; </span>
