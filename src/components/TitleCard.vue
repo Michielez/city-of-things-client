@@ -32,7 +32,6 @@ export default {
 }
 
 #titleCard h2 {
-    // font-size: clamp(1rem, 3vh, 2rem);
     font-size: 2rem;
     font-weight: 600;
 }
