@@ -19,6 +19,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     background-color: #E6E6F5;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -31,6 +32,7 @@ export default {
 }
 
 #titleCard h2 {
+    // font-size: clamp(1rem, 3vh, 2rem);
     font-size: 2rem;
     font-weight: 600;
 }
