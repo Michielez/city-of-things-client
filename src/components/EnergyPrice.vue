@@ -1,3 +1,5 @@
+<!-- TODO: make sure the component can be used for both dashboard and the specific building -->
+
 <template>
     <div id="energyPrice">
         <div id="header">
