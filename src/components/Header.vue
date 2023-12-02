@@ -47,7 +47,7 @@ export default {
 header, nav ul {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 5vw;
 }
 
 header {
@@ -58,14 +58,14 @@ header {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3vw;
   color: #1515BC;
   font-weight: 600;
 }
 
 nav ul a:not(.dropdown a), nav p {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.8vw;
 }
 
 .dropdown {
