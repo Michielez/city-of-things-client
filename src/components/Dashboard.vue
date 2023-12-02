@@ -37,13 +37,17 @@ export default {
 <style lang="scss" scoped>
 #dashboard {
     display: flex;
-    gap: 70px;
     height: 80vh;
+
+    justify-content: space-evenly;
 }
 #left, #middle, #right {
-    flex: 1;
+    width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 3%;
+
+    overflow: hidden;
 }
 </style>
