@@ -14,26 +14,26 @@ export default {
 </script>
 <style lang="scss" scoped>
 #facts {
-    height: 15%;
+    height: 42%;
     background-color: #A8A8F5;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
-    padding: 2rem;
     font-family: 'Staatliches', sans-serif;
+    padding: 5%;
 }
 #facts h3 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
+    font-size: 3.5vw;
+    margin-bottom: 4%;
 }
 #facts div {
     display: flex;
     align-items: center;
 }
 #facts img {
-    height: 40px;
+    height: 7vh;
 }
 #facts p {
-    margin-left: 10px;
-    font-size: 1.5rem;
+    margin-left: 2%;
+    font-size: 1.5vw;
 }
 </style>

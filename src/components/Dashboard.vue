@@ -48,6 +48,5 @@ export default {
     flex-direction: column;
     gap: 3%;
 
-    overflow: hidden;
 }
 </style>

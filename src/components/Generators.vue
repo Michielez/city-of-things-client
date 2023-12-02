@@ -16,37 +16,38 @@ export default {
 </script>
 <style lang="scss" scoped>
 #consumers {
+    height: 58%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #E6E6F5;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
-    padding: 2rem;
-    flex: 1;
+
+    padding: 5%;
 }
 #consumers img {
-    height: 80px;
+    height: 20%;
 }
 #consumers h2 {
-    margin-top: 10px;
-    font-size: 2rem;
+    margin-top: 1vh;
+    font-size: 2vw;
     font-weight: 600;
+    margin-bottom: 3vh;
 }
 #buildings {
     width: 100%;
-    flex-grow: 1;
     text-align: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 2vh;
 }
 #buildings li {
     background-color: #A8A8F5;
     border-radius: 1rem;
     padding: 1.2rem 0rem;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.4vw;
 }
 </style>
