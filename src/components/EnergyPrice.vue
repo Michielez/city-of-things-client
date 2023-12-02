@@ -56,18 +56,20 @@ export default {
 </script>
 <style lang="scss">
 #energyPrice {
+    height: 34.5%;
     display: flex;
     flex-direction: column;
     background-color: #E6E6F5;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
-    padding: 2rem;
-    flex: 1;
+
+    padding: 5%;
 }
 #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 1.8vw;
 }
 .unit {
     cursor: pointer;
@@ -85,7 +87,9 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    gap: 10%;
+
+    font-size: 1.2vw;
 }
 #energyPrice h3 {
     font-weight: 600;
@@ -95,7 +99,7 @@ hr {
     margin-bottom: 1rem;
 }
 #today p {
-    font-size: 2rem;
+    font-size: 2vw;
 }
 #today, #week, #month {
     display: flex;

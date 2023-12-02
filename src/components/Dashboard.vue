@@ -37,7 +37,7 @@ export default {
 <style lang="scss" scoped>
 #dashboard {
     display: flex;
-    height: 80vh;
+    height: 82vh;
 
     justify-content: space-evenly;
 }
