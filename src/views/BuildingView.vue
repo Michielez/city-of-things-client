@@ -1,13 +1,12 @@
 <template>
     <main>
-        <h1>dynamic loading of building</h1>
-        <p>{{ building.url }}</p>
+        <Building :building="building" />
     </main>
 </template>
 <script>
 
 import data from '../data/buildings';
-
+import Building from '../components/Building.vue';
 export default {
     name: "BuildingView",
     data() {
@@ -28,6 +27,9 @@ export default {
         updateBuilding(newUrl) {
             this.building = data.find((building) => building.url === newUrl);
         }
+    },
+    components: {
+        Building,
     }
 }
 </script>

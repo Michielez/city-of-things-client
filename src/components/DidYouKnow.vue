@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-    name: "Facts"
+    name: "DidYouKnow"
 }
 </script>
 <style lang="scss" scoped>
