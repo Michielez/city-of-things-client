@@ -64,6 +64,33 @@ export default {
     border-radius: 1rem;
 
     padding: 5%;
+
+    @media (max-width: 768px) {
+        height: 20vh;
+
+        margin-bottom: 2%;
+
+        p {
+            font-size: 5vw !important;
+            font-weight: 600;
+        }
+
+        #header {
+            font-size: 5vw !important;
+        }
+
+        #today {
+            margin-top: 5%;
+        }
+
+        #week {
+            margin-top: 8%;
+        }
+
+        img {
+            width: 40% !important;
+        }
+    }
 }
 #header {
     display: flex;

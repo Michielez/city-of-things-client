@@ -22,6 +22,8 @@ export default {
     padding: 5%;
 
     @media (max-width: 768px) {
+        height: 35vh;
+
         p {
             font-size: 3vw !important;
             font-weight: 600;

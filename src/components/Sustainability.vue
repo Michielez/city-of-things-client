@@ -20,6 +20,18 @@ export default {
 
     padding: 5%;
 
+    @media (max-width: 768px) {
+        height: 20vh;
+
+        font-size: 4.5vw !important;
+        font-weight: 600;
+
+        img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+
 }
 #sustainability h3 {
     font-weight: 600;
