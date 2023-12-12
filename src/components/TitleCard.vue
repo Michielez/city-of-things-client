@@ -24,6 +24,20 @@ export default {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 20%;
+            padding: 5%;
+        }
+
+        h2 {
+            font-size: 4vw !important;
+            font-weight: 600;
+        }
+    }
 }
 
 #titleCard img {

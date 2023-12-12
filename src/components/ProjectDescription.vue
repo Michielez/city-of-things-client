@@ -1,7 +1,7 @@
 <template>
     <div id="projectDescription">
         <p><span>City Of Things</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, porro dolor voluptatum dolorem quidem omnis molestias sequi necessitatibus quod officiis pariatur, recusandae error eum soluta corrupti tenetur, iste autem facere?</p>
-        <img src="../assets/images/KortijkLogo.jpg" alt="logo stad Kortrijk" title="logo stad Kortrijk">
+        <img src="../assets/images/KortijkLogo2.jpg" alt="logo stad Kortrijk" title="logo stad Kortrijk">
     </div>
 </template>
 <script>
@@ -20,6 +20,13 @@ export default {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     padding: 5%;
+
+    @media (max-width: 768px) {
+        p {
+            font-size: 3vw !important;
+            font-weight: 600;
+        }
+    }
 }
 #projectDescription p {
     font-size: 1.4vw;

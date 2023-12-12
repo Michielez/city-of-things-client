@@ -55,6 +55,28 @@ header {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 768px) {
+      height: 8vh;
+
+      h1 {
+        font-size: 5vw;
+        color: #1515BC;
+        font-weight: 600;
+      }
+
+      nav {
+        font-size: 3vw !important;
+        a {
+          font-size: 3vw !important;
+
+        }
+        p {
+          font-size: 3vw !important;
+
+        }
+      }
+    }
 }
 
 h1 {
