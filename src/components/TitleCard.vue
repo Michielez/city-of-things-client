@@ -31,9 +31,10 @@ export default {
         margin-bottom: 2%;
 
         height: 15vh;
-        
+
         img {
             width: 20%;
+            height: auto !important;
         }
 
         h2 {

@@ -27,10 +27,11 @@ export default {
     padding: 5%;
 
     @media (max-width: 768px) {
-        height: 40vh;
+        height: 45vh;
 
         margin-bottom: 2%;
 
+        padding-bottom: 8%;
         h2 {
             font-size: 4vw !important;
             font-weight: 600;
@@ -40,10 +41,11 @@ export default {
         li {
             font-size: 4vw !important;
             font-weight: 600;
+
         }
 
         img {
-            width: 25% !important;
+            width: 20% !important;
             height: auto !important;
         }
     }

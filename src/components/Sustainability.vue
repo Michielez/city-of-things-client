@@ -27,7 +27,7 @@ export default {
         font-weight: 600;
 
         img {
-            width: 100% !important;
+            width: 80% !important;
             height: auto !important;
 
         }

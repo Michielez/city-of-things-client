@@ -68,7 +68,6 @@ export default {
             margin-bottom: 5%;
         }
 
-        overflow: hidden;
     }
 }
 </style>

@@ -25,7 +25,7 @@ main {
   margin-left: auto;
   margin-right: auto;
 
-  
+  color: #05052E;
 }
 
 
