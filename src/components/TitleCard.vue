@@ -31,6 +31,7 @@ export default {
         margin-bottom: 2%;
 
         height: 15vh;
+        
         img {
             width: 20%;
         }

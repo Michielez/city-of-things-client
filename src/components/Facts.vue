@@ -20,6 +20,29 @@ export default {
     border-radius: 1rem;
     font-family: 'Staatliches', sans-serif;
     padding: 5%;
+
+    @media (max-width: 768px) {
+        height: 15vh;
+
+        margin-bottom: 2%;
+
+        h3 {
+            font-size: 6vw !important;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 4vw !important;
+            font-weight: 600;
+            margin-top: 5% !important;
+        }
+
+
+        img {
+            width: 20% !important;
+            height: auto !important;
+        }
+    }
 }
 #facts h3 {
     font-size: 3.5vw;

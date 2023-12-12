@@ -11,7 +11,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #projectDescription {
-    height: 35vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;

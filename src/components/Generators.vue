@@ -25,6 +25,28 @@ export default {
     border-radius: 1rem;
 
     padding: 5%;
+
+    @media (max-width: 768px) {
+        height: 40vh;
+
+        margin-bottom: 2%;
+
+        h2 {
+            font-size: 4vw !important;
+            font-weight: 600;
+            margin-top: 5% !important;
+        }
+
+        li {
+            font-size: 4vw !important;
+            font-weight: 600;
+        }
+
+        img {
+            width: 25% !important;
+            height: auto !important;
+        }
+    }
 }
 #consumers img {
     height: 20%;
