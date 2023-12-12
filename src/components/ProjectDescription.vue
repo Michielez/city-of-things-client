@@ -25,12 +25,13 @@ export default {
         height: 35vh;
 
         p {
-            font-size: 3vw !important;
+            font-size: 4vw !important;
             font-weight: 600;
         }
 
         img {
             width: 40% !important;
+            height: auto !important;
         }
     }
 }
