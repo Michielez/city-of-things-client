@@ -11,7 +11,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #projectDescription {
-    height: 72%;
+    height: 35vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +25,10 @@ export default {
         p {
             font-size: 3vw !important;
             font-weight: 600;
+        }
+
+        img {
+            width: 40% !important;
         }
     }
 }
