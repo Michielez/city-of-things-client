@@ -17,8 +17,16 @@ export default {
 
 <style scoped>
 main {
-  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+
+  color: #05052E;
 }
+
+
 </style>
