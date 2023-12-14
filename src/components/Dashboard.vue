@@ -11,7 +11,7 @@
         </div>
         <div id="right">
             <Generators />
-            <Facts />
+            <DidYouKnow />
         </div>
     </div>
 </template>
@@ -20,7 +20,7 @@ import TitleCard from './TitleCard.vue';
 import ProjectDescription from './ProjectDescription.vue';
 import EnergyPrice from './EnergyPrice.vue';
 import Generators from './Generators.vue';
-import Facts from './Facts.vue';
+import DidYouKnow from './DidYouKnow.vue';
 import Sustainability from './Sustainability.vue';
 export default {
     name: "Dashboard",
@@ -29,7 +29,7 @@ export default {
         ProjectDescription,
         EnergyPrice,
         Generators,
-        Facts,
+        DidYouKnow,
         Sustainability
     }
 }
