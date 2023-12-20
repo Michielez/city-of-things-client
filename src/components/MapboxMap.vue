@@ -13,6 +13,12 @@ export default {
     components: {
         EnergyIcon
     },
+    props: {
+        buildings: {
+            type: Array,
+            default: () => []
+        }
+    },
     data() {
         return {
             map: null
@@ -27,6 +33,22 @@ export default {
             center: [3.252,50.8256969], // starting position [lng, lat]
             zoom: 15
         })
+        this.map.on('load', () => {
+            this.addMarkers();
+        })
+    },
+    methods: {
+        addMarkers() {
+            this.buildings.forEach(building => {
+                if (building.location){
+                    console.log(building.location)
+                    new mapboxgl.Marker()
+                    .setLngLat([building.location.lng, building.location.lat])
+                    .setPopup(new mapboxgl.Popup().setHTML(`<h3>${building.name}</h3>`))
+                    .addTo(this.map)
+                }
+            });
+        }
     }
 
 }
@@ -36,6 +58,7 @@ export default {
 
 .mapContainer {
   height: 60vh;
-  width: 60vw;
+  width: 80%;
+  margin: 0 auto;
   }
 </style>
