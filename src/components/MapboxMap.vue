@@ -3,15 +3,19 @@
 </template>
 
 <script>
-
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-import EnergyIcon from './EnergyIcon.vue';
+import greenMarker from '../assets/icons/energy-marker-icon/green.svg'
+import orangeMarker from '../assets/icons/energy-marker-icon/orange.svg'
+import orangeRedMarker from '../assets/icons/energy-marker-icon/orangered.svg'
+import redMarker from '../assets/icons/energy-marker-icon/red.svg'
+
+
 export default {
     name: "MapboxMap",
     components: {
-        EnergyIcon
+        
     },
     props: {
         buildings: {
@@ -24,13 +28,13 @@ export default {
             map: null
         }
     },
-    mounted(){
+    mounted() {
         mapboxgl.accessToken = "pk.eyJ1IjoibWljaGllbC1zdHJhZ2llciIsImEiOiJjbHBzZnZpN3gwM2Q5Mmpxc2IwZzU1OHB0In0.XTKi-w4ZbMXY7Q2kQ6Jbig";
 
         this.map = new mapboxgl.Map({
             container: this.$refs.mapContainer,
             style: 'mapbox://styles/mapbox/streets-v12',
-            center: [3.252,50.8256969], // starting position [lng, lat]
+            center: [3.252, 50.8256969], // starting position [lng, lat]
             zoom: 15.5
         })
         this.map.on('load', () => {
@@ -40,12 +44,24 @@ export default {
     methods: {
         addMarkers() {
             this.buildings.forEach(building => {
-                if (building.location){
-                    console.log(building.location)
-                    new mapboxgl.Marker()
-                    .setLngLat([building.location.lng, building.location.lat])
-                    .setPopup(new mapboxgl.Popup().setHTML(`<h3>${building.name}</h3>`))
-                    .addTo(this.map)
+                if (building.location) {
+                    const el = document.createElement('div');
+                    el.innerHTML = `<img src="${redMarker}" alt="Custom Marker" class="">`;
+                    el.style.width = "30px"
+                    el.style.height = "30px"
+
+                    const markerHTML = `
+                    <h1>${building.name}</h1>
+                    <ul>
+                        <li><span>Verbruik:<span></li>
+                        <li></li>
+                    </ul>
+                    `
+
+                    new mapboxgl.Marker(el)
+                        .setLngLat([building.location.lng, building.location.lat])
+                        .setPopup(new mapboxgl.Popup().setHTML(markerHTML))
+                        .addTo(this.map)
                 }
             });
         }
@@ -55,10 +71,9 @@ export default {
 </script>
 
 <style scoped>
-
 .mapContainer {
-  height: 60vh;
-  width: 80%;
-  margin: 0 auto;
-  }
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
 </style>

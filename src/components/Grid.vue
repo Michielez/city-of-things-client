@@ -10,16 +10,22 @@ export default {
   },
 
   components:{
-    MapboxMap
+    MapboxMap  
   }
 }
 </script>
 
 <template>
-  <p>The grid</p>
-  <MapboxMap :buildings="buildings"/>
+  <div class="container">
+    <MapboxMap :buildings="buildings"/>
+
+  </div>
 </template>
 
 <style lang="scss">
-
+  .container{
+    width: 92%;
+    margin: 0 auto;
+    height: 82vh;
+  }
 </style>
