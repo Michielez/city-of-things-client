@@ -31,6 +31,11 @@ export default {
         Generators,
         DidYouKnow,
         Sustainability
+    },
+    mounted() {
+        document.getElementById('left').classList.add('fade-in');
+        document.getElementById('middle').classList.add('fade-in');
+        document.getElementById('right').classList.add('fade-in');
     }
 }
 </script>
@@ -46,6 +51,8 @@ export default {
         flex-direction: column;
         align-items: center;
     }
+
+    overflow: hidden;
 }
 #left, #middle, #right {
     width: 30%;
@@ -68,6 +75,52 @@ export default {
             margin-bottom: 5%;
         }
 
+    }
+    
+}
+
+#left.fade-in {
+    animation: fadeInLeft 1.4s ease-out;
+}
+#middle.fade-in {
+    animation: fadeIn 1.4s ease-out;
+}
+
+#right.fade-in {
+    animation: fadeInRight 1.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 </style>
