@@ -31,7 +31,7 @@ export default {
             container: this.$refs.mapContainer,
             style: 'mapbox://styles/mapbox/streets-v12',
             center: [3.252,50.8256969], // starting position [lng, lat]
-            zoom: 15
+            zoom: 15.5
         })
         this.map.on('load', () => {
             this.addMarkers();

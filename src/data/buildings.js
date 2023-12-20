@@ -8,16 +8,16 @@ const data = [
         name: "Magdalena Zwembad",
         url: "magdalena-zwembad",
         location: {
-            lat: 50.823685,
-            lng: 3.2495237
+            lat: 50.8236,
+            lng: 3.2504
         }
     },
     {
         name: "De Penta",
         url: "de-penta",
         location: {
-            lat: 50.8244321,
-            lng: 3.2510099
+            lat: 50.82405,
+            lng: 3.2515
         }
     },
     {
@@ -59,15 +59,15 @@ const data = [
         url: "hangar-k",
         location: {
             lat: 50.8253657,
-            lng: 3.2520493
+            lng: 3.2545
         }
     },
     {
         name: "Flanders Make",
         url: "flanders-make",
         location: {
-            lat: 50.8241296,
-            lng: 3.2516155
+            lat: 50.8243,
+            lng: 3.25295
         }
     }
 ];
