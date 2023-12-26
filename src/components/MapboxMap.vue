@@ -33,7 +33,7 @@ export default {
 
         this.map = new mapboxgl.Map({
             container: this.$refs.mapContainer,
-            style: 'mapbox://styles/mapbox/streets-v12',
+            style: 'mapbox://styles/mapbox/outdoors-v12',
             center: [3.252, 50.8256969], // starting position [lng, lat]
             zoom: 15.5
         })
@@ -50,11 +50,20 @@ export default {
                     el.style.width = "30px"
                     el.style.height = "30px"
 
+
                     const markerHTML = `
-                    <h1>${building.name}</h1>
+                    <h1 style="font-size:1.2rem; margin-bottom:0.5rem;">${building.name}</h1>
                     <ul>
-                        <li><span>Verbruik:<span></li>
-                        <li></li>
+                        <li>
+                            <p>
+                                <span style="font-weight:bolder;">Verbruik: </span>40KWh
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span style="font-weight:bolder;">Duurzaamheid: </span>60%
+                            </p>
+                        </li>
                     </ul>
                     `
 
