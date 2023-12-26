@@ -1,5 +1,5 @@
 <script>
-import MapboxMap from '../components/MapboxMap.vue';
+import LeafletMap from '../components/LeafletMap.vue';
 import buildings from '../data/buildings'
 export default {
   name: "Grid",
@@ -10,14 +10,14 @@ export default {
   },
 
   components:{
-    MapboxMap  
+    LeafletMap  
   }
 }
 </script>
 
 <template>
   <div class="container">
-    <MapboxMap :buildings="buildings"/>
+    <LeafletMap :buildings="buildings"/>
 
   </div>
 </template>
