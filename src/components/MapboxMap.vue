@@ -3,20 +3,14 @@
 </template>
 
 <script>
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-
-import greenMarker from '../assets/icons/energy-marker-icon/green.svg'
-import orangeMarker from '../assets/icons/energy-marker-icon/orange.svg'
-import orangeRedMarker from '../assets/icons/energy-marker-icon/orangered.svg'
-import redMarker from '../assets/icons/energy-marker-icon/red.svg'
-
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import GreenIcon from '../assets/icons/energy-marker-icon/green.svg'
+import OrangeIcon from '../assets/icons/energy-marker-icon/orange.svg'
+import RedIcon from '../assets/icons/energy-marker-icon/red.svg'
 
 export default {
-    name: "MapboxMap",
-    components: {
-        
-    },
+    name: "LeafletMap",
     props: {
         buildings: {
             type: Array,
@@ -29,53 +23,52 @@ export default {
         }
     },
     mounted() {
-        mapboxgl.accessToken = "pk.eyJ1IjoibWljaGllbC1zdHJhZ2llciIsImEiOiJjbHBzZnZpN3gwM2Q5Mmpxc2IwZzU1OHB0In0.XTKi-w4ZbMXY7Q2kQ6Jbig";
+        this.map = L.map(this.$refs.mapContainer).setView([50.8256969, 3.252], 15.5);
 
-        this.map = new mapboxgl.Map({
-            container: this.$refs.mapContainer,
-            style: 'mapbox://styles/mapbox/outdoors-v12',
-            center: [3.252, 50.8256969], // starting position [lng, lat]
-            zoom: 15.5
-        })
-        this.map.on('load', () => {
-            this.addMarkers();
-        })
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(this.map);
+
+        this.addMarkers();
     },
     methods: {
         addMarkers() {
-            this.buildings.forEach(building => {
-                if (building.location) {
-                    const el = document.createElement('div');
-                    el.innerHTML = `<img src="${redMarker}" alt="Custom Marker" class="">`;
-                    el.style.width = "30px"
-                    el.style.height = "30px"
-
-
-                    const markerHTML = `
-                    <h1 style="font-size:1.2rem; margin-bottom:0.5rem;">${building.name}</h1>
-                    <ul>
-                        <li>
-                            <p>
-                                <span style="font-weight:bolder;">Verbruik: </span>40KWh
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span style="font-weight:bolder;">Duurzaamheid: </span>60%
-                            </p>
-                        </li>
-                    </ul>
-                    `
-
-                    new mapboxgl.Marker(el)
-                        .setLngLat([building.location.lng, building.location.lat])
-                        .setPopup(new mapboxgl.Popup().setHTML(markerHTML))
-                        .addTo(this.map)
+        this.buildings.forEach(building => {
+            if (building.location) {
+                let customIconUrl;
+                if (building.rating === 'green'){
+                    customIconUrl = GreenIcon;
+                } if (building.rating === 'orange'){
+                    customIconUrl = OrangeIcon;
+                } if (building.rating === 'red'){
+                    customIconUrl = RedIcon;
                 }
-            });
-        }
-    }
 
+               
+
+                const customIcon = L.icon({
+                    iconUrl: customIconUrl,
+                    iconSize: [30, 30], // Size of the icon
+                    iconAnchor: [15, 30], // Point of the icon which will correspond to marker's location
+                    popupAnchor: [0, -30] // Point from which the popup should open relative to the iconAnchor
+                });
+
+                const markerHTML = `
+                    <h3>${building.name}</h3>
+                    <ul>
+                        <li>Verbruik: ${building.usage}</li>
+                        <li>Duurzaamheid: ${building.sustainability}</li>
+                    </ul>
+                `;
+
+                L.marker([building.location.lat, building.location.lng], { icon: customIcon })
+                    .addTo(this.map)
+                    .bindPopup(markerHTML);
+            }
+        });
+    }
+    }
 }
 </script>
 
