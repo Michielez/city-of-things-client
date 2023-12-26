@@ -27,5 +27,6 @@ export default {
     width: 92%;
     margin: 0 auto;
     height: 82vh;
+    z-index: 0;
   }
 </style>
