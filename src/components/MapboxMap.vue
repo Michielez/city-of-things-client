@@ -23,7 +23,7 @@ export default {
         }
     },
     mounted() {
-        this.map = L.map(this.$refs.mapContainer).setView([50.8256969, 3.252], 15.5);
+        this.map = L.map(this.$refs.mapContainer).setView([50.8256969, 3.252], 17);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -37,21 +37,25 @@ export default {
             this.buildings.forEach(building => {
                 if (building.location) {
                     let customIconUrl;
+                    let customIconSize;
                     if (building.rating === 'green') {
                         customIconUrl = GreenIcon;
+                        customIconSize = 30;
                     } if (building.rating === 'orange') {
                         customIconUrl = OrangeIcon;
+                        customIconSize = 40;
                     } if (building.rating === 'red') {
                         customIconUrl = RedIcon;
+                        customIconSize = 50;
                     }
 
 
 
                     const customIcon = L.icon({
                         iconUrl: customIconUrl,
-                        iconSize: [30, 30], // Size of the icon
-                        iconAnchor: [15, 30], // Point of the icon which will correspond to marker's location
-                        popupAnchor: [0, -30] // Point from which the popup should open relative to the iconAnchor
+                        iconSize: [customIconSize, customIconSize],
+                        iconAnchor: [15, 30], 
+                        popupAnchor: [0, -30] 
                     });
 
                     const markerHTML = `
