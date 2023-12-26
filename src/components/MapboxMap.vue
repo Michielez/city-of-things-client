@@ -34,48 +34,57 @@ export default {
     },
     methods: {
         addMarkers() {
-        this.buildings.forEach(building => {
-            if (building.location) {
-                let customIconUrl;
-                if (building.rating === 'green'){
-                    customIconUrl = GreenIcon;
-                } if (building.rating === 'orange'){
-                    customIconUrl = OrangeIcon;
-                } if (building.rating === 'red'){
-                    customIconUrl = RedIcon;
-                }
+            this.buildings.forEach(building => {
+                if (building.location) {
+                    let customIconUrl;
+                    if (building.rating === 'green') {
+                        customIconUrl = GreenIcon;
+                    } if (building.rating === 'orange') {
+                        customIconUrl = OrangeIcon;
+                    } if (building.rating === 'red') {
+                        customIconUrl = RedIcon;
+                    }
 
-               
 
-                const customIcon = L.icon({
-                    iconUrl: customIconUrl,
-                    iconSize: [30, 30], // Size of the icon
-                    iconAnchor: [15, 30], // Point of the icon which will correspond to marker's location
-                    popupAnchor: [0, -30] // Point from which the popup should open relative to the iconAnchor
-                });
 
-                const markerHTML = `
+                    const customIcon = L.icon({
+                        iconUrl: customIconUrl,
+                        iconSize: [30, 30], // Size of the icon
+                        iconAnchor: [15, 30], // Point of the icon which will correspond to marker's location
+                        popupAnchor: [0, -30] // Point from which the popup should open relative to the iconAnchor
+                    });
+
+                    const markerHTML = `
                     <h3>${building.name}</h3>
                     <ul>
-                        <li>Verbruik: ${building.usage}</li>
-                        <li>Duurzaamheid: ${building.sustainability}</li>
+                        <li><span>Verbruik:</span> ${building.usage}</li>
+                        <li><span>Duurzaamheid:</span> ${building.sustainability}</li>
                     </ul>
-                `;
+                    `;
 
-                L.marker([building.location.lat, building.location.lng], { icon: customIcon })
-                    .addTo(this.map)
-                    .bindPopup(markerHTML);
-            }
-        });
-    }
+                    L.marker([building.location.lat, building.location.lng], { icon: customIcon })
+                        .addTo(this.map)
+                        .bindPopup(markerHTML);
+                }
+            });
+        }
     }
 }
 </script>
 
-<style scoped>
+<style>
 .mapContainer {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
 }
+.leaflet-popup-content-wrapper h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .leaflet-popup-content-wrapper li span{
+    font-weight: bold;
+  }
 </style>
