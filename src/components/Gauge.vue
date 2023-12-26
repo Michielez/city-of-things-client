@@ -1,5 +1,11 @@
 <template>
-    <canvas class="gauge"></canvas>
+    <div>
+        <canvas class="gauge-canvas"></canvas>
+        <div class="flex-container">
+            <p>Duurzaam</p>
+            <p>Niet-duurzaam</p>
+        </div>
+    </div>
 </template>
   
 <script>
@@ -27,7 +33,7 @@ export default {
     },
     data() {
         return {
-            gauge: null 
+            gauge: null
         };
     },
     mounted() {
@@ -38,19 +44,19 @@ export default {
             let zones = [
                 { strokeStyle: "green", min: 0, max: 130 },
                 { strokeStyle: "orange", min: 130, max: 160 },
-                { strokeStyle: "red", min: 160, max: 200 }     
-                
+                { strokeStyle: "red", min: 160, max: 200 }
+
             ];
 
             for (let i = 0; i < zones.length; i++) {
-                if (i === 0){
+                if (i === 0) {
                     zones[i].min = 0;
-                    zones[i].max = this.maxValue*0.65;
-                } if (i === 1){
-                    zones[i].min = this.maxValue*0.65;
-                    zones[i].max = this.maxValue*0.8;
-                } if (i === 2){
-                    zones[i].min = this.maxValue*0.8;
+                    zones[i].max = this.maxValue * 0.65;
+                } if (i === 1) {
+                    zones[i].min = this.maxValue * 0.65;
+                    zones[i].max = this.maxValue * 0.8;
+                } if (i === 2) {
+                    zones[i].min = this.maxValue * 0.8;
                     zones[i].max = this.maxValue;
                 }
             }
@@ -67,10 +73,11 @@ export default {
                     color: '#000000'
                 },
                 staticZones: this.calculateZones(),
+                highDpiSupport: true
             };
             const gaugeOptions = { ...defaultOptions, ...this.options };
 
-            const target = document.querySelector('.gauge');
+            const target = document.querySelector('.gauge-canvas');
             this.gauge = new Gauge(target).setOptions(gaugeOptions);
             this.gauge.maxValue = this.maxValue || 100;
             this.gauge.setMinValue(this.minValue || 0);
@@ -82,6 +89,17 @@ export default {
 </script>
   
 <style lang="scss" scoped>
-/* Your styles here */
+.gauge-canvas {
+    aspect-ratio: 2 / 1;
+    height: 100%;
+    /* or any specific value */
+    max-width: 100%;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
 </style>
   

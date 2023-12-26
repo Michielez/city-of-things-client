@@ -3,7 +3,9 @@
 <template>
     <div id="sustainability">
         <h3>Duurzaamheid (realtime)</h3>
-        <Gauge :current-value="100" :maxValue="100" :min-value="0"/>
+        <div class="gauge-container">
+            <Gauge :current-value="75" :maxValue="100" :min-value="0"/>
+        </div>
     </div>
 </template>
 <script>
@@ -37,6 +39,12 @@ export default {
             height: auto !important;
 
         }
+    }
+    .gauge-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
 
 }
