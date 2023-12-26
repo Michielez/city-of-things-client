@@ -3,12 +3,16 @@
 <template>
     <div id="sustainability">
         <h3>Duurzaamheid (realtime)</h3>
-        <img src="../assets/images/new-gauge.png" alt="">
+        <Gauge :current-value="100" :maxValue="100" :min-value="0"/>
     </div>
 </template>
 <script>
+import Gauge from './Gauge.vue'
 export default {
-    name: "Sustainability"
+    name: "Sustainability",
+    components: {
+        Gauge
+    }
 }
 </script>
 <style lang="scss" scoped>
